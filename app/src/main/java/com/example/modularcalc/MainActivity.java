@@ -114,5 +114,13 @@ public class MainActivity extends AppCompatActivity {
         ed1.setText(result + "");
     }
 
+    public void acEvent(View view) {
+        ed1.setText("");
+        isNewOp =  true;
+    }
 
+    public void percentEvent(View view) {
+        double number =  Double.parseDouble(ed1.getText().toString())/100;
+        ed1.setText(number+"");
+    }
 }
