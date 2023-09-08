@@ -91,4 +91,28 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
+    public void equalEvent(View view) {
+        String newnumber = ed1.getText().toString();
+        double result = 0.0;
+        switch (isOp){
+            case "+" :
+                result =  Double.parseDouble(OldNumber) + Double.parseDouble(newnumber);
+                break;
+            case "-" :
+                result =  Double.parseDouble(OldNumber) - Double.parseDouble(newnumber);
+                break;
+            case "*" :
+                result = Double.parseDouble(OldNumber) * Double.parseDouble(newnumber);
+                break;
+            case "/" :
+                result = Double.parseDouble(OldNumber) / Double.parseDouble(newnumber);
+                break;
+            case "%" :
+                result = Double.parseDouble(OldNumber) % Double.parseDouble(newnumber);
+                break;
+        }
+        ed1.setText(result + "");
+    }
+
+
 }
